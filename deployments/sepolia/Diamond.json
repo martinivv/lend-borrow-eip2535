@@ -1,0 +1,365 @@
+{
+  "address": "0xB4CAc24d60b947313185A6346F7a8CA73424aF5C",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "diamondInit",
+              "type": "address"
+            },
+            {
+              "internalType": "bytes",
+              "name": "data",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct Diamond.DiamondArgs",
+          "name": "_args",
+          "type": "tuple"
+        },
+        {
+          "internalType": "address",
+          "name": "_diamondCutFacet",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [],
+      "name": "CannotReplaceTheSameFunction",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "FunctionAlreadyExists",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "FunctionDoesNotExist",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "ImmutableFunctionDetected",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint8",
+          "name": "_actionNum",
+          "type": "uint8"
+        }
+      ],
+      "name": "IncorrectFacetCutAction",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_initializationContractAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes",
+          "name": "_calldata",
+          "type": "bytes"
+        }
+      ],
+      "name": "InitializationFunctionReverted",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_caller",
+          "type": "address"
+        }
+      ],
+      "name": "MustBeDiamondOwner",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_newFacetAddress",
+          "type": "address"
+        }
+      ],
+      "name": "MustBeZeroAddress",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "NoSelectorFound",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "TransferFailed",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "facetAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "enum IDiamondCutFacet.FacetCutAction",
+              "name": "action",
+              "type": "uint8"
+            },
+            {
+              "internalType": "bytes4[]",
+              "name": "functionSelectors",
+              "type": "bytes4[]"
+            }
+          ],
+          "indexed": false,
+          "internalType": "struct IDiamondCutFacet.FacetCut[]",
+          "name": "_diamondCut",
+          "type": "tuple[]"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "_init",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "_calldata",
+          "type": "bytes"
+        }
+      ],
+      "name": "DiamondCut",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "stateMutability": "payable",
+      "type": "fallback"
+    },
+    {
+      "inputs": [],
+      "name": "rescue",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "stateMutability": "payable",
+      "type": "receive"
+    }
+  ],
+  "transactionHash": "0x61c7eeeb6dffbd546f6184cc553383355db8c600a09d174202e7bc6a31a38625",
+  "receipt": {
+    "to": null,
+    "from": "0x8dfD6AE6d263262da0E4a2634d899a0085923Fbc",
+    "contractAddress": "0xB4CAc24d60b947313185A6346F7a8CA73424aF5C",
+    "transactionIndex": 51,
+    "gasUsed": "611940",
+    "logsBloom": "0x00000000000000000000000000000000000040000000000000800000020000008000000000000000000000000000000000000000000000000200000001000000000000000000000000000000000000000001000001000000000800000000000000000000020000000000000000000800000000000000000000000000000000400020000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0xda5a1f374e6bc898c7e5a3315db17a2ed630fe4fb7c412072f232d6a0a32ae59",
+    "transactionHash": "0x61c7eeeb6dffbd546f6184cc553383355db8c600a09d174202e7bc6a31a38625",
+    "logs": [
+      {
+        "transactionIndex": 51,
+        "blockNumber": 4624254,
+        "transactionHash": "0x61c7eeeb6dffbd546f6184cc553383355db8c600a09d174202e7bc6a31a38625",
+        "address": "0xB4CAc24d60b947313185A6346F7a8CA73424aF5C",
+        "topics": [
+          "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0",
+          "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "0x0000000000000000000000008dfd6ae6d263262da0e4a2634d899a0085923fbc"
+        ],
+        "data": "0x",
+        "logIndex": 93,
+        "blockHash": "0xda5a1f374e6bc898c7e5a3315db17a2ed630fe4fb7c412072f232d6a0a32ae59"
+      },
+      {
+        "transactionIndex": 51,
+        "blockNumber": 4624254,
+        "transactionHash": "0x61c7eeeb6dffbd546f6184cc553383355db8c600a09d174202e7bc6a31a38625",
+        "address": "0xB4CAc24d60b947313185A6346F7a8CA73424aF5C",
+        "topics": [
+          "0x8faa70878671ccd212d20771b795c50af8fd3ff6cf27f4bde57e5d4de0aeb673"
+        ],
+        "data": "0x00000000000000000000000000000000000000000000000000000000000000600000000000000000000000007ea6df6bc1ba3c0cef7804a6a0a0c492b9ad1030000000000000000000000000000000000000000000000000000000000000014000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000020000000000000000000000000ffeab444c96ebf2f28ce1fa04aab0535042262b10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000011f931c1c000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000244d3d62b98000000000000000000000000000000000000000000000000000000000000002000000000000000000000000062ef433a9cf0c199f76e8f1434eb9f8e4ad71eb30000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000003e800000000000000000000000000000000000000000000000000000000000001f400000000000000000000000000000000000000000000000000000000000001f400000000000000000000000000000000000000000000000000000000000023280000000000000000000000000000000000000000000000000000000000000001000000000000000000000000ff34b3d4aee8ddcd6f9afffb6fe49bd371b8a3570000000000000000000000000d79df66be487753b02d015fb622ded7f0e9798d00000000000000000000000000000000000000000000000000000000000005dc00000000000000000000000000000000000000000000000000000000000003e800000000000000000000000000000000000000000000000000000000000005dc0000000000000000000000000000000000000000000000000000000000001f400000000000000000000000000000000000000000000000000000000000000001000000000000000000000000f8fb3713d459d7c1018bd0a49d19b4c44290ebe500000000000000000000000048731cf7e84dc94c5f84577882c14be11a5b745600000000000000000000000000000000000000000000000000000000",
+        "logIndex": 94,
+        "blockHash": "0xda5a1f374e6bc898c7e5a3315db17a2ed630fe4fb7c412072f232d6a0a32ae59"
+      }
+    ],
+    "blockNumber": 4624254,
+    "cumulativeGasUsed": "6281101",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [
+    {
+      "owner": "0x8dfD6AE6d263262da0E4a2634d899a0085923Fbc",
+      "diamondInit": "0x7eA6Df6bc1ba3c0CeF7804a6a0a0C492B9AD1030",
+      "data": "0xd3d62b98000000000000000000000000000000000000000000000000000000000000002000000000000000000000000062ef433a9cf0c199f76e8f1434eb9f8e4ad71eb30000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000003e800000000000000000000000000000000000000000000000000000000000001f400000000000000000000000000000000000000000000000000000000000001f400000000000000000000000000000000000000000000000000000000000023280000000000000000000000000000000000000000000000000000000000000001000000000000000000000000ff34b3d4aee8ddcd6f9afffb6fe49bd371b8a3570000000000000000000000000d79df66be487753b02d015fb622ded7f0e9798d00000000000000000000000000000000000000000000000000000000000005dc00000000000000000000000000000000000000000000000000000000000003e800000000000000000000000000000000000000000000000000000000000005dc0000000000000000000000000000000000000000000000000000000000001f400000000000000000000000000000000000000000000000000000000000000001000000000000000000000000f8fb3713d459d7c1018bd0a49d19b4c44290ebe500000000000000000000000048731cf7e84dc94c5f84577882c14be11a5b7456"
+    },
+    "0xFFEAB444c96EBf2f28CE1Fa04AAB0535042262b1"
+  ],
+  "numDeployments": 3,
+  "solcInputHash": "bf3ace87e0080de70e4c37f388c527e3",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.20+commit.a1b79de6\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"components\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"diamondInit\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"internalType\":\"struct Diamond.DiamondArgs\",\"name\":\"_args\",\"type\":\"tuple\"},{\"internalType\":\"address\",\"name\":\"_diamondCutFacet\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"CannotReplaceTheSameFunction\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"FunctionAlreadyExists\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"FunctionDoesNotExist\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"ImmutableFunctionDetected\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"_actionNum\",\"type\":\"uint8\"}],\"name\":\"IncorrectFacetCutAction\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_initializationContractAddress\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"_calldata\",\"type\":\"bytes\"}],\"name\":\"InitializationFunctionReverted\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_caller\",\"type\":\"address\"}],\"name\":\"MustBeDiamondOwner\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_newFacetAddress\",\"type\":\"address\"}],\"name\":\"MustBeZeroAddress\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"NoSelectorFound\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"TransferFailed\",\"type\":\"error\"},{\"anonymous\":false,\"inputs\":[{\"components\":[{\"internalType\":\"address\",\"name\":\"facetAddress\",\"type\":\"address\"},{\"internalType\":\"enum IDiamondCutFacet.FacetCutAction\",\"name\":\"action\",\"type\":\"uint8\"},{\"internalType\":\"bytes4[]\",\"name\":\"functionSelectors\",\"type\":\"bytes4[]\"}],\"indexed\":false,\"internalType\":\"struct IDiamondCutFacet.FacetCut[]\",\"name\":\"_diamondCut\",\"type\":\"tuple[]\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_init\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"_calldata\",\"type\":\"bytes\"}],\"name\":\"DiamondCut\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"stateMutability\":\"payable\",\"type\":\"fallback\"},{\"inputs\":[],\"name\":\"rescue\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"stateMutability\":\"payable\",\"type\":\"receive\"}],\"devdoc\":{\"author\":\"Forked implementation with minor compatibility modifications. Original source: https://github.com/mudgen\",\"custom:advice\":\"If your project's complexity requires it, consider creating your own implementationConsider adding events and more parameters to the custom errors throughout the Diamond contracts for improved monitoring\",\"custom:version\":\"0.0.1\",\"kind\":\"dev\",\"methods\":{\"constructor\":{\"details\":\"Be aware that `data` is executed with delegatecall on the `DiamondInit` contract\",\"params\":{\"_args\":\"Initial arguments\"}}},\"title\":\"Diamond\",\"version\":1},\"userdoc\":{\"events\":{\"DiamondCut((address,uint8,bytes4[])[],address,bytes)\":{\"notice\":\"Emitted on a successful cut\"},\"OwnershipTransferred(address,address)\":{\"notice\":\"Emitted when diamond owner is updated\"}},\"kind\":\"user\",\"methods\":{\"constructor\":{\"notice\":\"Sets the diamond owner, cuts the @param _diamondCutFacet address, and then calls the `DiamondInit` contract with `data`\"},\"rescue()\":{\"notice\":\"A rescue function for missent/donated *msg.value*\"}},\"notice\":\"Diamond proxy contract. Serves as the primary entry point for the protocol\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/contracts/diamond/core/Diamond.sol\":\"Diamond\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"none\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":600},\"remappings\":[]},\"sources\":{\"src/contracts/diamond/core/Diamond.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// solhint-disable no-complex-fallback\\n\\npragma solidity =0.8.20;\\n\\nimport {d} from \\\"../libraries/DiamondState.sol\\\";\\nimport {IDiamondCutFacet} from \\\"../interfaces/IDiamondCutFacet.sol\\\";\\n// Consider adding remappings\\nimport {DiamondErrors} from \\\"../../helpers/Errors.sol\\\";\\n\\n/// @title Diamond\\n/// @author Forked implementation with minor compatibility modifications. Original source: https://github.com/mudgen\\n/// @notice Diamond proxy contract. Serves as the primary entry point for the protocol\\n/// @custom:advice If your project's complexity requires it, consider creating your own implementation\\n/// @custom:advice Consider adding events and more parameters to the custom errors throughout the Diamond contracts\\n/// for improved monitoring\\n/// @custom:version 0.0.1\\ncontract Diamond {\\n    struct DiamondArgs {\\n        address owner;\\n        address diamondInit;\\n        bytes data;\\n    }\\n\\n    /// @notice Sets the diamond owner, cuts the @param _diamondCutFacet address, and then calls the `DiamondInit`\\n    /// contract with `data`\\n    /// @param _args Initial arguments\\n    /// @dev Be aware that `data` is executed with delegatecall on the `DiamondInit` contract\\n    constructor(DiamondArgs memory _args, address _diamondCutFacet) {\\n        d().setContractOwner(_args.owner);\\n\\n        IDiamondCutFacet.FacetCut[] memory cut = new IDiamondCutFacet.FacetCut[](1);\\n        bytes4[] memory functionSelectors = new bytes4[](1);\\n        functionSelectors[0] = IDiamondCutFacet.diamondCut.selector;\\n        cut[0] = IDiamondCutFacet.FacetCut({\\n            facetAddress: _diamondCutFacet,\\n            action: IDiamondCutFacet.FacetCutAction.Add,\\n            functionSelectors: functionSelectors\\n        });\\n\\n        d().diamondCut(cut, _args.diamondInit, _args.data);\\n    }\\n\\n    /// @notice Receives ether\\n    receive() external payable {}\\n\\n    /// @notice Finds the facet for the function that is called and executes the function if the facet is found\\n    fallback() external payable {\\n        address facet = address(bytes20(d().facets[msg.sig]));\\n        if (facet == address(0)) revert DiamondErrors.FunctionDoesNotExist();\\n\\n        assembly {\\n            calldatacopy(0, 0, calldatasize())\\n            let result := delegatecall(gas(), facet, 0, calldatasize(), 0, 0)\\n            returndatacopy(0, 0, returndatasize())\\n            switch result\\n            case 0 {\\n                revert(0, returndatasize())\\n            }\\n            default {\\n                return(0, returndatasize())\\n            }\\n        }\\n    }\\n\\n    /// @notice A rescue function for missent/donated *msg.value*\\n    function rescue() external {\\n        if (msg.sender != d().contractOwner) revert DiamondErrors.MustBeDiamondOwner(msg.sender);\\n\\n        (bool success, ) = msg.sender.call{value: address(this).balance}(\\\"\\\");\\n        if (!success) revert DiamondErrors.TransferFailed();\\n    }\\n}\\n\",\"keccak256\":\"0x779f14562cbcb980985ab73c7754c60e97f282639bdabd58b46e348c952c781c\",\"license\":\"MIT\"},\"src/contracts/diamond/interfaces/IDiamondCutFacet.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity =0.8.20;\\n\\n/// @title IDiamondCutFacet\\n/// @notice Interface that allows modifications to diamond function selector mapping\\ninterface IDiamondCutFacet {\\n    /// @notice Struct used as a mapping of facet to function selectors\\n    struct FacetCut {\\n        address facetAddress;\\n        FacetCutAction action;\\n        bytes4[] functionSelectors;\\n    }\\n\\n    /// @notice Available diamond operations\\n    /// @dev Add=0, Replace=1, Remove=2\\n    enum FacetCutAction {\\n        Add,\\n        Replace,\\n        Remove\\n    }\\n\\n    /// @notice Emitted when facet selectors are modified\\n    event DiamondCut(FacetCut[] _diamondCut, address _init, bytes _calldata);\\n\\n    /// @notice Adds/replaces/removes any number of functions and optionally executes\\n    /// a function with delegatecall\\n    /// @param _diamondCut Contains the facet addresses and function selectors\\n    /// @param _init The address of the contract or facet to execute `_calldata`\\n    /// @param _calldata A function call, including function selector and arguments\\n    /// @dev Be aware that `_calldata` is executed with delegatecall on the `_init` contract\\n    function diamondCut(FacetCut[] calldata _diamondCut, address _init, bytes calldata _calldata) external;\\n}\\n\",\"keccak256\":\"0x3acf0660b6a64d0e066525a914763149d9efe9be92ee16e5ce90acd5a1b09009\",\"license\":\"MIT\"},\"src/contracts/diamond/libraries/DiamondState.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity =0.8.20;\\n\\nimport {LibDiamondCut} from \\\"./logic/LibDiamondCut.sol\\\";\\nimport {LibDiamondOwnership} from \\\"./logic/LibDiamondOwnership.sol\\\";\\n\\nusing LibDiamondCut for DiamondState global;\\nusing LibDiamondOwnership for DiamondState global;\\n\\n/// @notice Struct defining the current diamond state\\n/// @custom:advice Consider creating a library with \\\"generic\\\" functions related to `DiamondState`\\nstruct DiamondState {\\n    /// @notice Function selector -> address facet and selector positions\\n    mapping(bytes4 => bytes32) facets;\\n    /// @notice Array of slots of function selectors, each slot holds 8 function selectors\\n    mapping(uint256 => bytes32) selectorSlots;\\n    /// @notice The number of function selectors in `selectorSlots`\\n    uint16 selectorCount;\\n    /// @notice ERC-165 implementation; query if a contract implements an interface\\n    mapping(bytes4 => bool) supportedInterfaces;\\n    /// @notice The owner of the Diamond contract\\n    address contractOwner;\\n}\\n\\n// ======================== Pointer ================================================================\\n\\nbytes32 constant DIAMOND_STORAGE_POSITION = keccak256(\\\"martinivv.diamond.storage\\\");\\n\\n/// @notice Used as a shared storage\\n/// @return ds Storage pointer to `DiamondState` struct\\nfunction d() pure returns (DiamondState storage ds) {\\n    bytes32 position = DIAMOND_STORAGE_POSITION;\\n\\n    assembly {\\n        ds.slot := position\\n    }\\n}\\n\",\"keccak256\":\"0x134f91bbed10b47ed90a102ccbb176c45e8d67521b28aacf6656d40e084cb3b6\",\"license\":\"MIT\"},\"src/contracts/diamond/libraries/logic/LibDiamondCut.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// solhint-disable avoid-low-level-calls\\n// solhint-disable code-complexity\\n// solhint-disable custom-errors\\n\\npragma solidity =0.8.20;\\n\\nimport {IDiamondCutFacet} from \\\"../../interfaces/IDiamondCutFacet.sol\\\";\\nimport {DiamondState, d} from \\\"../DiamondState.sol\\\";\\n// Consider adding remappings\\nimport {DiamondEvents} from \\\"../../../helpers/Events.sol\\\";\\nimport {DiamondErrors} from \\\"../../../helpers/Errors.sol\\\";\\nimport {DiamondConstants} from \\\"../../../helpers/Constants.sol\\\";\\n\\n/// @notice See {diamondCut}'s @notice\\n/// @custom:security Will behave like an internal function of the calling contract\\nfunction initializeDiamondCut(address _init, bytes memory _calldata) {\\n    if (_init == address(0)) return;\\n\\n    LibDiamondCut.enforceHasContractCode(_init, \\\"LibDiamondCut: _init address has no code\\\");\\n\\n    (bool success, bytes memory error) = _init.delegatecall(_calldata);\\n    if (!success) {\\n        if (error.length > 0) {\\n            /// @solidity memory-safe-assembly\\n            assembly {\\n                let returndata_size := mload(error)\\n                revert(add(32, error), returndata_size)\\n            }\\n        } else {\\n            revert DiamondErrors.InitializationFunctionReverted(_init, _calldata);\\n        }\\n    }\\n}\\n\\n/// @title LibDiamondCut\\n/// @notice Internal function versions of `DiamondCutFacet` ones\\n/// @dev This code is almost the same as the external `DiamondCutFacet` one,\\n/// except it is using `Facet[] memory _diamondCut` instead of\\n/// `Facet[] calldata _diamondCut`. The code is duplicated to prevent\\n/// copying calldata to memory which causes an error for a two dimensional array\\nlibrary LibDiamondCut {\\n    /// @notice Adds/replaces/removes any number of functions and optionally executes\\n    /// a function with delegatecall\\n    /// @param _diamondCut Contains the facet addresses and function selectors\\n    /// @param _init The address of the contract or facet to execute `_calldata`\\n    /// @param _calldata A function call, including function selector and arguments\\n    /// @dev Be aware that `_calldata` is executed with delegatecall on the `_init` contract\\n    function diamondCut(\\n        DiamondState storage self,\\n        IDiamondCutFacet.FacetCut[] memory _diamondCut,\\n        address _init,\\n        bytes memory _calldata\\n    ) internal {\\n        uint256 originalSelectorCount = self.selectorCount;\\n        uint256 selectorCount = originalSelectorCount;\\n        bytes32 selectorSlot;\\n\\n        if (selectorCount & 7 > 0) selectorSlot = self.selectorSlots[selectorCount >> 3];\\n\\n        for (uint256 facetIndex; facetIndex < _diamondCut.length; ) {\\n            (selectorCount, selectorSlot) = addReplaceRemoveFacetSelectors(\\n                selectorCount,\\n                selectorSlot,\\n                _diamondCut[facetIndex].facetAddress,\\n                _diamondCut[facetIndex].action,\\n                _diamondCut[facetIndex].functionSelectors\\n            );\\n\\n            unchecked {\\n                facetIndex++;\\n            }\\n        }\\n\\n        if (selectorCount != originalSelectorCount) self.selectorCount = uint16(selectorCount);\\n\\n        if (selectorCount & 7 > 0) self.selectorSlots[selectorCount >> 3] = selectorSlot;\\n\\n        emit DiamondEvents.DiamondCut(_diamondCut, _init, _calldata);\\n        initializeDiamondCut(_init, _calldata);\\n    }\\n\\n    /// @notice See {diamondCut}'s @notice\\n    function addReplaceRemoveFacetSelectors(\\n        uint256 _selectorCount,\\n        bytes32 _selectorSlot,\\n        address _newFacetAddress,\\n        IDiamondCutFacet.FacetCutAction _action,\\n        bytes4[] memory _selectors\\n    ) internal returns (uint256, bytes32) {\\n        DiamondState storage self = d();\\n\\n        if (_selectors.length < 1) revert DiamondErrors.NoSelectorFound();\\n\\n        if (_action == IDiamondCutFacet.FacetCutAction.Add) {\\n            enforceHasContractCode(_newFacetAddress, \\\"LibDiamondCut: Add facet has no code\\\");\\n\\n            for (uint256 selectorIndex; selectorIndex < _selectors.length; ) {\\n                bytes4 selector = _selectors[selectorIndex];\\n                bytes32 oldFacet = self.facets[selector];\\n\\n                if (address(bytes20(oldFacet)) != address(0)) revert DiamondErrors.FunctionAlreadyExists();\\n\\n                self.facets[selector] = bytes20(_newFacetAddress) | bytes32(_selectorCount);\\n                uint256 selectorInSlotPosition = (_selectorCount & 7) << 5;\\n                _selectorSlot =\\n                    (_selectorSlot & ~(DiamondConstants.CLEAR_SELECTOR_MASK >> selectorInSlotPosition)) |\\n                    (bytes32(selector) >> selectorInSlotPosition);\\n\\n                if (selectorInSlotPosition == 224) {\\n                    self.selectorSlots[_selectorCount >> 3] = _selectorSlot;\\n                    _selectorSlot = 0;\\n                }\\n\\n                _selectorCount++;\\n\\n                unchecked {\\n                    selectorIndex++;\\n                }\\n            }\\n        } else if (_action == IDiamondCutFacet.FacetCutAction.Replace) {\\n            enforceHasContractCode(_newFacetAddress, \\\"LibDiamondCut: Replace facet has no code\\\");\\n\\n            for (uint256 selectorIndex; selectorIndex < _selectors.length; ) {\\n                bytes4 selector = _selectors[selectorIndex];\\n                bytes32 oldFacet = self.facets[selector];\\n                address oldFacetAddress = address(bytes20(oldFacet));\\n\\n                if (oldFacetAddress == address(this)) revert DiamondErrors.ImmutableFunctionDetected();\\n\\n                if (oldFacetAddress == _newFacetAddress) revert DiamondErrors.CannotReplaceTheSameFunction();\\n\\n                if (oldFacetAddress == address(0)) revert DiamondErrors.FunctionDoesNotExist();\\n\\n                self.facets[selector] = (oldFacet & DiamondConstants.CLEAR_ADDRESS_MASK) | bytes20(_newFacetAddress);\\n\\n                unchecked {\\n                    selectorIndex++;\\n                }\\n            }\\n        } else if (_action == IDiamondCutFacet.FacetCutAction.Remove) {\\n            if (_newFacetAddress != address(0)) revert DiamondErrors.MustBeZeroAddress(_newFacetAddress);\\n\\n            uint256 selectorSlotCount = _selectorCount >> 3;\\n            uint256 selectorInSlotIndex = _selectorCount & 7;\\n\\n            for (uint256 selectorIndex; selectorIndex < _selectors.length; ) {\\n                if (_selectorSlot == 0) {\\n                    selectorSlotCount--;\\n                    _selectorSlot = self.selectorSlots[selectorSlotCount];\\n                    selectorInSlotIndex = 7;\\n                } else {\\n                    selectorInSlotIndex--;\\n                }\\n\\n                bytes4 lastSelector;\\n                uint256 oldSelectorsSlotCount;\\n                uint256 oldSelectorInSlotPosition;\\n\\n                {\\n                    bytes4 selector = _selectors[selectorIndex];\\n                    bytes32 oldFacet = self.facets[selector];\\n                    if (address(bytes20(oldFacet)) == address(0)) revert DiamondErrors.FunctionDoesNotExist();\\n\\n                    if (address(bytes20(oldFacet)) == address(this)) revert DiamondErrors.ImmutableFunctionDetected();\\n\\n                    lastSelector = bytes4(_selectorSlot << (selectorInSlotIndex << 5));\\n\\n                    if (lastSelector != selector) {\\n                        self.facets[lastSelector] =\\n                            (oldFacet & DiamondConstants.CLEAR_ADDRESS_MASK) |\\n                            bytes20(self.facets[lastSelector]);\\n                    }\\n\\n                    delete self.facets[selector];\\n\\n                    uint256 oldSelectorCount = uint16(uint256(oldFacet));\\n                    oldSelectorsSlotCount = oldSelectorCount >> 3;\\n                    oldSelectorInSlotPosition = (oldSelectorCount & 7) << 5;\\n                }\\n\\n                if (oldSelectorsSlotCount != selectorSlotCount) {\\n                    bytes32 oldSelectorSlot = self.selectorSlots[oldSelectorsSlotCount];\\n\\n                    oldSelectorSlot =\\n                        (oldSelectorSlot & ~(DiamondConstants.CLEAR_SELECTOR_MASK >> oldSelectorInSlotPosition)) |\\n                        (bytes32(lastSelector) >> oldSelectorInSlotPosition);\\n\\n                    self.selectorSlots[oldSelectorsSlotCount] = oldSelectorSlot;\\n                } else {\\n                    _selectorSlot =\\n                        (_selectorSlot & ~(DiamondConstants.CLEAR_SELECTOR_MASK >> oldSelectorInSlotPosition)) |\\n                        (bytes32(lastSelector) >> oldSelectorInSlotPosition);\\n                }\\n\\n                if (selectorInSlotIndex == 0) {\\n                    delete self.selectorSlots[selectorSlotCount];\\n                    _selectorSlot = 0;\\n                }\\n\\n                unchecked {\\n                    selectorIndex++;\\n                }\\n            }\\n\\n            _selectorCount = selectorSlotCount * 8 + selectorInSlotIndex;\\n        } else {\\n            revert DiamondErrors.IncorrectFacetCutAction(uint8(_action));\\n        }\\n\\n        return (_selectorCount, _selectorSlot);\\n    }\\n\\n    /// @notice Ensures that the @param _contract has code, otherwise throws an @param _errorMessage\\n    function enforceHasContractCode(address _contract, string memory _errorMessage) internal view {\\n        uint256 contractSize;\\n\\n        assembly {\\n            contractSize := extcodesize(_contract)\\n        }\\n\\n        require(contractSize > 0, _errorMessage);\\n    }\\n}\\n\",\"keccak256\":\"0x35d9df95b89c58f00c599f6fea6b6d7d7192428a16e2eb7f6362e6765ac68844\",\"license\":\"MIT\"},\"src/contracts/diamond/libraries/logic/LibDiamondOwnership.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity =0.8.20;\\n\\nimport {DiamondState} from \\\"../DiamondState.sol\\\";\\nimport {DiamondErrors} from \\\"../../../helpers/Errors.sol\\\";\\n\\n/// @title LibDiamondOwnership\\n/// @notice Library collection of diamond ownership functions\\nlibrary LibDiamondOwnership {\\n    /// @notice Emitted when diamond owner is updated\\n    event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);\\n\\n    /// @notice Updates the diamond owner to @param _newOwner's address\\n    function setContractOwner(DiamondState storage self, address _newOwner) internal {\\n        address previousOwner = self.contractOwner;\\n        self.contractOwner = _newOwner;\\n\\n        emit OwnershipTransferred(previousOwner, _newOwner);\\n    }\\n\\n    /// @notice Returns the diamond @return contractOwner_'s address\\n    function getContractOwner(DiamondState storage self) internal view returns (address contractOwner_) {\\n        contractOwner_ = self.contractOwner;\\n    }\\n\\n    /// @notice Checks if `msg.sender` is the diamond owner\\n    function enforceIsContractOwner(DiamondState storage self) internal view {\\n        if (msg.sender != self.contractOwner) revert DiamondErrors.MustBeDiamondOwner(msg.sender);\\n    }\\n}\\n\",\"keccak256\":\"0xd3f4d72fea315ac0781dfc55f5f2b9d8e11262d360f7578ef591228cc385b8d0\",\"license\":\"MIT\"},\"src/contracts/domain/interfaces/IAggregatorV3.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity =0.8.20;\\n\\n/// @title IAggregatorV3\\n/// @notice This interface enables utilization of Chainlink data feeds\\ninterface IAggregatorV3 {\\n    /// @notice Returns the number of decimals in the response\\n    /// @return {uint8}\\n    function decimals() external view returns (uint8);\\n\\n    /// @notice Gets data from the latest round\\n    /// @return roundId The round ID\\n    /// @return answer The data that this specific feed provides\\n    /// @return startedAt Timestamp of when the round started\\n    /// @return updatedAt Timestamp of when the round was updated\\n    /// @return answeredInRound Deprecated. Previously used when answers could take multiple rounds to be computed\\n    function latestRoundData()\\n        external\\n        view\\n        returns (uint80 roundId, int256 answer, uint256 startedAt, uint256 updatedAt, uint80 answeredInRound);\\n}\\n\",\"keccak256\":\"0xf6e216dc33b61ef00f056ccd84e6a9ced64db2dd98a604cafbc5193978485bd2\",\"license\":\"MIT\"},\"src/contracts/helpers/Constants.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// solhint-disable one-contract-per-file\\n// solhint-disable state-visibility\\n\\npragma solidity =0.8.20;\\n\\n/// @title DiamondConstants\\n/// @notice Constants used all around the Diamond logic\\nlibrary DiamondConstants {\\n    /// @notice Diamond's property\\n    bytes32 constant CLEAR_ADDRESS_MASK = bytes32(uint256(0xffffffffffffffffffffffff));\\n    /// @notice Diamond's property\\n    bytes32 constant CLEAR_SELECTOR_MASK = bytes32(uint256(0xffffffff << 224));\\n}\\n\\n/// @title DomainConstants\\n/// @notice Constants used all around the Domain logic\\nlibrary DomainConstants {\\n    /// @notice Used for handling calculations with basis points\\n    uint256 constant BASIS_POINTS = 10_000;\\n    /// @notice One day in seconds\\n    uint256 constant SECONDS_PER_DAY = 1 days;\\n    /// @notice Days in a year. Yeap years are ignored\\n    uint256 constant DAYS_PER_YEAR = 365;\\n    /// @notice ReentrancyGuard's property\\n    uint256 constant _NOT_ENTERED = 1;\\n    /// @notice ReentrancyGuard's property\\n    uint256 constant _ENTERED = 2;\\n}\\n\",\"keccak256\":\"0xa91d9468a2376c940149c6d99e6cacd92a78bf16d90d3fae43dbb1789f9b1028\",\"license\":\"MIT\"},\"src/contracts/helpers/Errors.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// solhint-disable one-contract-per-file\\n\\npragma solidity =0.8.20;\\n\\nimport {IAggregatorV3} from \\\"../domain/interfaces/IAggregatorV3.sol\\\";\\n\\n/// @title DiamondErrors\\n/// @notice Errors used all around the Diamond logic\\nlibrary DiamondErrors {\\n    error FunctionDoesNotExist();\\n    error TooManyFunctionsInAFacet();\\n    error NoZeroAddressOwner();\\n    error NoSelectorFound();\\n    error FunctionAlreadyExists();\\n    error ImmutableFunctionDetected();\\n    error CannotReplaceTheSameFunction();\\n    error MustBeZeroAddress(address _newFacetAddress);\\n    error IncorrectFacetCutAction(uint8 _actionNum);\\n    error InitializationFunctionReverted(address _initializationContractAddress, bytes _calldata);\\n    error MustBeDiamondOwner(address _caller);\\n    error TransferFailed();\\n}\\n\\n/// @title DomainErrors\\n/// @notice Errors used all around the Domain logic\\n/// @custom:advice Use distinct naming for the errors if your error monitoring model requires it\\nlibrary DomainErrors {\\n    // =============== Protocol ========================================\\n    error ReentrantCall();\\n    // =============== Deposit ========================================\\n    error TokenNotAllowed(address _caller, address _tokenAddress);\\n    error AmountShouldBePositive(address _caller);\\n    error NotEnoughTokensInExistence();\\n    error TokenNotStaked(address _caller, address _tokenAddress);\\n    error CollateralAlreadyOn();\\n    error CollateralNotEnabled(address _caller, address _tokenAddress);\\n    error CollateralCurrentlyInUse();\\n    // =============== Borrow ========================================\\n    error NoAmountAvailable();\\n    error CannotBorrowAmount(address _caller, uint256 maxAmountToBorrowInUsd, uint256 amountToBeBorrowedInUsd);\\n    error InsufficientProtocolFunds();\\n    error CollateralMismatch();\\n    // =============== Repay ========================================\\n    error TokenNotBorrowed(address _caller, address _tokenAddress);\\n    error CollateralNotInUse();\\n    error InsufficientTokenAmount();\\n    error Error404();\\n    error TokenAlreadyThere();\\n    error NoTokensFound();\\n    // =============== Liquidation ========================================\\n    error SelfLiquidationNotAllowed();\\n    error NotLiquidatable(address _caller);\\n    // =============== LibCalculator ========================================\\n    error AnswerShouldBePositiveNum(uint80 roundId, int256 answer);\\n    error InvalidTime(uint80 roundId, uint256 updatedAt);\\n    error StalePrice(uint80 roundId);\\n    error OracleNotAvailable(IAggregatorV3 dataFeed);\\n    // =============== UI ========================================\\n    error UI__TokenNotAllowed(address _caller, address _tokenAddress);\\n}\\n\",\"keccak256\":\"0x24db49ec47c0dfe9a5ab4164cff3bd3b41df64767e8cebec12fed494cae978e1\",\"license\":\"MIT\"},\"src/contracts/helpers/Events.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// solhint-disable one-contract-per-file\\n\\npragma solidity =0.8.20;\\n\\nimport {IDiamondCutFacet} from \\\"../diamond/interfaces/IDiamondCutFacet.sol\\\";\\n\\n/// @title DiamondEvents\\n/// @notice Events used all around the Diamond logic\\nlibrary DiamondEvents {\\n    /// @notice Emitted on a successful cut\\n    event DiamondCut(IDiamondCutFacet.FacetCut[] _diamondCut, address _init, bytes _calldata);\\n}\\n\\n/// @title DomainEvents\\n/// @notice Events used all around the Domain logic\\nlibrary DomainEvents {\\n    /// @notice Emitted on a successful deposit/stake in the protocol\\n    event Deposit(address _depositedToken, uint256 _depositedAmount, address indexed _depositor);\\n    /// @notice Emitted on a successful collateral activation\\n    event CollateralOn(address _tokenAddress, address _depositor);\\n    /// @notice Emitted on a successful collateral deactivation\\n    event CollateralOff(address _tokenAddress, address _depositor);\\n    /// @notice Emitted on a successful borrow from the protocol\\n    event Borrow(address borrowedToken, uint256 _borrowedAmount, address indexed _borrower);\\n    /// @notice Emitted on a successful repayment to the protocol\\n    event Repay(address borrowedToken, uint256 _repayedAmount, address indexed _borrower);\\n    /// @notice Emitted on a successful withdrawal from the protocol\\n    event Withdraw(address token, uint256 amount, address indexed _depositor);\\n    /// @notice Emitted on a successful liquidation\\n    event Liquidation(address indexed _borrower, address indexed borrowedToken, uint256 keeperReward, address _keeper);\\n}\\n\",\"keccak256\":\"0x6c57d33228666ccd54542c1150d3bd1a4eb099ed89d8ecb34123c292eebfa82d\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x60806040523480156200001157600080fd5b5060405162000ff338038062000ff3833981016040819052620000349162000a51565b8151620000529060008051602062000f5f833981519152906200017f565b604080516001808252818301909252600091816020015b60408051606080820183526000808352602083015291810191909152815260200190600190039081620000695750506040805160018082528183019092529192506000919060208083019080368337019050509050631f931c1c60e01b81600081518110620000dc57620000dc62000b5a565b6001600160e01b031990921660209283029190910182015260408051606081019091526001600160a01b03851681529081016000815260200182815250826000815181106200012f576200012f62000b5a565b6020026020010181905250620001628285602001518660400151620001596200016c60201b60201c565b929190620001d4565b5050505062000da5565b60008051602062000f5f83398151915290565b6004820180546001600160a01b038381166001600160a01b0319831681179093556040519116919082907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e090600090a3505050565b600284015461ffff811690819060009060071615620002055750600381901c60009081526001870160205260409020545b60005b865181101562000295576200028783838984815181106200022d576200022d62000b5a565b6020026020010151600001518a85815181106200024e576200024e62000b5a565b6020026020010151602001518b86815181106200026f576200026f62000b5a565b6020026020010151604001516200032760201b60201c565b909350915060010162000208565b50828214620002b25760028701805461ffff191661ffff84161790555b6007821615620002d557600382901c600090815260018801602052604090208190555b7f8faa70878671ccd212d20771b795c50af8fd3ff6cf27f4bde57e5d4de0aeb6738686866040516200030a9392919062000bb4565b60405180910390a16200031e85856200089e565b50505050505050565b6000808060008051602062000f5f833981519152905060018451101562000361576040516346d699e360e11b815260040160405180910390fd5b600085600281111562000378576200037862000b70565b036200049f57620003a38660405180606001604052806024815260200162000f7f6024913962000976565b60005b845181101562000498576000858281518110620003c757620003c762000b5a565b6020908102919091018101516001600160e01b03198116600090815291859052604090912054909150606081901c15620004145760405163a023275d60e01b815260040160405180910390fd5b6001600160e01b031980831660008181526020879052604090206001600160601b031960608d901b168e17905560e060058e901b811692831c199c909c1690821c179a819003620004795760038c901c600090815260018601602052604081209b909b555b8b620004858162000cd1565b9c505060019093019250620003a6915050565b5062000892565b6001856002811115620004b657620004b662000b70565b03620005f157620004e18660405180606001604052806028815260200162000fcb6028913962000976565b60005b84518110156200049857600085828151811062000505576200050562000b5a565b6020908102919091018101516001600160e01b03198116600090815291859052604090912054909150606081901c308103620005545760405163dc90201360e01b815260040160405180910390fd5b896001600160a01b0316816001600160a01b03160362000587576040516379cc663760e01b815260040160405180910390fd5b6001600160a01b038116620005af57604051631535ac5f60e31b815260040160405180910390fd5b506001600160e01b031990911660009081526020849052604090206001600160601b03919091166001600160601b031960608a901b16179055600101620004e4565b600285600281111562000608576200060862000b70565b036200085d576001600160a01b03861615620006475760405163136f5a4b60e31b81526001600160a01b03871660048201526024015b60405180910390fd5b600388901c6007891660005b8651811015620008385760008a9003620006945782620006738162000ced565b60008181526001870160205260409020549b50935060079250620006a49050565b81620006a08162000ced565b9250505b6000806000808a8581518110620006bf57620006bf62000b5a565b6020908102919091018101516001600160e01b031981166000908152918a9052604090912054909150606081901c6200070b57604051631535ac5f60e31b815260040160405180910390fd5b30606082901c03620007305760405163dc90201360e01b815260040160405180910390fd5b600587901b8f901b94506001600160e01b03198086169083161462000782576001600160e01b03198516600090815260208a90526040902080546001600160601b0319166001600160601b0383161790555b6001600160e01b031991909116600090815260208990526040812055600381901c611fff16925060051b60e0169050858214620007e9576000828152600188016020526040902080546001600160e01b031980841c19909116908516831c1790556200080d565b80836001600160e01b031916901c816001600160e01b031960001b901c198e16179c505b846000036200082c57600086815260018801602052604081208190559c505b50505060010162000653565b50806200084783600862000d07565b62000853919062000d27565b9950505062000892565b84600281111562000872576200087262000b70565b604051633ff4d20f60e11b815260ff90911660048201526024016200063e565b50959694955050505050565b6001600160a01b038216620008b1575050565b620008d68260405180606001604052806028815260200162000fa36028913962000976565b600080836001600160a01b031683604051620008f3919062000d3d565b600060405180830381855af49150503d806000811462000930576040519150601f19603f3d011682016040523d82523d6000602084013e62000935565b606091505b5091509150816200097057805115620009515780518082602001fd5b838360405163192105d760e01b81526004016200063e92919062000d5b565b50505050565b813b8181620009705760405162461bcd60e51b81526004016200063e919062000d89565b634e487b7160e01b600052604160045260246000fd5b604051606081016001600160401b0381118282101715620009d557620009d56200099a565b60405290565b604051601f8201601f191681016001600160401b038111828210171562000a065762000a066200099a565b604052919050565b80516001600160a01b038116811462000a2657600080fd5b919050565b60005b8381101562000a4857818101518382015260200162000a2e565b50506000910152565b6000806040838503121562000a6557600080fd5b82516001600160401b038082111562000a7d57600080fd5b908401906060828703121562000a9257600080fd5b62000a9c620009b0565b62000aa78362000a0e565b8152602062000ab881850162000a0e565b8183015260408401518381111562000acf57600080fd5b80850194505087601f85011262000ae557600080fd5b83518381111562000afa5762000afa6200099a565b62000b0e601f8201601f19168301620009db565b9350808452888282870101111562000b2557600080fd5b62000b368183860184880162000a2b565b5082604083015281955062000b4d81880162000a0e565b9450505050509250929050565b634e487b7160e01b600052603260045260246000fd5b634e487b7160e01b600052602160045260246000fd5b6000815180845262000ba081602086016020860162000a2b565b601f01601f19169290920160200192915050565b60006060808301818452808751808352608092508286019150828160051b8701016020808b0160005b8481101562000c8957898403607f19018652815180516001600160a01b0316855283810151898601906003811062000c2557634e487b7160e01b600052602160045260246000fd5b868601526040918201519186018a905281519081905290840190600090898701905b8083101562000c735783516001600160e01b031916825292860192600192909201919086019062000c47565b5097850197955050509082019060010162000bdd565b50506001600160a01b038a1690880152868103604088015262000cad818962000b86565b9a9950505050505050505050565b634e487b7160e01b600052601160045260246000fd5b60006001820162000ce65762000ce662000cbb565b5060010190565b60008162000cff5762000cff62000cbb565b506000190190565b808202811582820484141762000d215762000d2162000cbb565b92915050565b8082018082111562000d215762000d2162000cbb565b6000825162000d5181846020870162000a2b565b9190910192915050565b6001600160a01b038316815260406020820181905260009062000d819083018462000b86565b949350505050565b60208152600062000d9e602083018462000b86565b9392505050565b6101aa8062000db56000396000f3fe6080604052600436106100225760003560e01c80631fbe1979146100c157610029565b3661002957005b600080357fffffffff000000000000000000000000000000000000000000000000000000001681527f33db93811595d149127b48476bd7ca575d33b2af3516f373596199e9ec7c3020602052604090205460601c8061009b57604051631535ac5f60e31b815260040160405180910390fd5b3660008037600080366000845af43d6000803e8080156100ba573d6000f35b3d6000fd5b005b3480156100cd57600080fd5b506100bf7f33db93811595d149127b48476bd7ca575d33b2af3516f373596199e9ec7c30206004015473ffffffffffffffffffffffffffffffffffffffff1633146101315760405163d0d827f160e01b815233600482015260240160405180910390fd5b604051600090339047908381818185875af1925050503d8060008114610173576040519150601f19603f3d011682016040523d82523d6000602084013e610178565b606091505b505090508061019a576040516312171d8360e31b815260040160405180910390fd5b5056fea164736f6c6343000814000a33db93811595d149127b48476bd7ca575d33b2af3516f373596199e9ec7c30204c69624469616d6f6e644375743a2041646420666163657420686173206e6f20636f64654c69624469616d6f6e644375743a205f696e6974206164647265737320686173206e6f20636f64654c69624469616d6f6e644375743a205265706c61636520666163657420686173206e6f20636f6465",
+  "deployedBytecode": "0x6080604052600436106100225760003560e01c80631fbe1979146100c157610029565b3661002957005b600080357fffffffff000000000000000000000000000000000000000000000000000000001681527f33db93811595d149127b48476bd7ca575d33b2af3516f373596199e9ec7c3020602052604090205460601c8061009b57604051631535ac5f60e31b815260040160405180910390fd5b3660008037600080366000845af43d6000803e8080156100ba573d6000f35b3d6000fd5b005b3480156100cd57600080fd5b506100bf7f33db93811595d149127b48476bd7ca575d33b2af3516f373596199e9ec7c30206004015473ffffffffffffffffffffffffffffffffffffffff1633146101315760405163d0d827f160e01b815233600482015260240160405180910390fd5b604051600090339047908381818185875af1925050503d8060008114610173576040519150601f19603f3d011682016040523d82523d6000602084013e610178565b606091505b505090508061019a576040516312171d8360e31b815260040160405180910390fd5b5056fea164736f6c6343000814000a",
+  "facets": [
+    {
+      "facetAddress": "0xFFEAB444c96EBf2f28CE1Fa04AAB0535042262b1",
+      "functionSelectors": [
+        "0x1f931c1c"
+      ]
+    },
+    {
+      "facetAddress": "0xc5FF7DF6Ab6621691D52829aD176BC18b0331Fd9",
+      "functionSelectors": [
+        "0xcdffacc6",
+        "0x52ef6b2c",
+        "0xadfca15e",
+        "0x7a0ed627",
+        "0x01ffc9a7"
+      ]
+    },
+    {
+      "facetAddress": "0xd8D8344fA59D1c1079395970385107C49B3AC8Eb",
+      "functionSelectors": [
+        "0x8da5cb5b",
+        "0xf2fde38b"
+      ]
+    },
+    {
+      "facetAddress": "0xe538AB745ce87c2ef4dbf7C4Cff28C1011a12687",
+      "functionSelectors": [
+        "0x47e7ef24",
+        "0xb75faac0",
+        "0x97279197"
+      ]
+    },
+    {
+      "facetAddress": "0x2B2e7cA1318a9d8E587A2C24BD68de0EB628cB79",
+      "functionSelectors": [
+        "0x5224372c"
+      ]
+    },
+    {
+      "facetAddress": "0x7d8d52DB01C53c1CDFa169c99822d203573eDBb7",
+      "functionSelectors": [
+        "0x1da649cf"
+      ]
+    },
+    {
+      "facetAddress": "0xb02467Cc764390Ac48a628979D35185d47F354Ae",
+      "functionSelectors": [
+        "0xf3fef3a3"
+      ]
+    },
+    {
+      "facetAddress": "0x296216d8c63769E3bC68a17F58C27eE1b8722Aea",
+      "functionSelectors": [
+        "0x86b9d81f"
+      ]
+    },
+    {
+      "facetAddress": "0x5Bf828D2F291b6f66A5c2D80b4d6695Ec1E65345",
+      "functionSelectors": [
+        "0x669d7631"
+      ]
+    },
+    {
+      "facetAddress": "0x30c2FC007867CcaAe7083a86f208Accc2DD3792d",
+      "functionSelectors": [
+        "0x5d78650e",
+        "0x32abcdbe",
+        "0x6178bad6",
+        "0x02f8e9a3",
+        "0x73a050c9",
+        "0x63c28db1",
+        "0xad8b3435"
+      ]
+    }
+  ],
+  "devdoc": {
+    "author": "Forked implementation with minor compatibility modifications. Original source: https://github.com/mudgen",
+    "custom:advice": "If your project's complexity requires it, consider creating your own implementationConsider adding events and more parameters to the custom errors throughout the Diamond contracts for improved monitoring",
+    "custom:version": "0.0.1",
+    "kind": "dev",
+    "methods": {
+      "constructor": {
+        "details": "Be aware that `data` is executed with delegatecall on the `DiamondInit` contract",
+        "params": {
+          "_args": "Initial arguments"
+        }
+      }
+    },
+    "title": "Diamond",
+    "version": 1
+  },
+  "userdoc": {
+    "events": {
+      "DiamondCut((address,uint8,bytes4[])[],address,bytes)": {
+        "notice": "Emitted on a successful cut"
+      },
+      "OwnershipTransferred(address,address)": {
+        "notice": "Emitted when diamond owner is updated"
+      }
+    },
+    "kind": "user",
+    "methods": {
+      "constructor": {
+        "notice": "Sets the diamond owner, cuts the @param _diamondCutFacet address, and then calls the `DiamondInit` contract with `data`"
+      },
+      "rescue()": {
+        "notice": "A rescue function for missent/donated *msg.value*"
+      }
+    },
+    "notice": "Diamond proxy contract. Serves as the primary entry point for the protocol",
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [],
+    "types": null
+  }
+}

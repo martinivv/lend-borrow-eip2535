@@ -1,0 +1,54 @@
+{
+   "Diamond": {
+      "Facets": {
+         "DiamondCutFacet": {
+            "Address": "0xFFEAB444c96EBf2f28CE1Fa04AAB0535042262b1",
+            "Version": "0.0.1"
+         },
+         "DiamondLoupeFacet": {
+            "Address": "0xc5FF7DF6Ab6621691D52829aD176BC18b0331Fd9",
+            "Version": "0.0.1"
+         },
+         "DiamondOwnershipFacet": {
+            "Address": "0xd8D8344fA59D1c1079395970385107C49B3AC8Eb",
+            "Version": "0.0.1"
+         },
+         "DepositFacet": {
+            "Address": "0xe538AB745ce87c2ef4dbf7C4Cff28C1011a12687",
+            "Version": "0.0.1"
+         },
+         "BorrowFacet": {
+            "Address": "0x2B2e7cA1318a9d8E587A2C24BD68de0EB628cB79",
+            "Version": "0.0.1"
+         },
+         "RepayFacet": {
+            "Address": "0x7d8d52DB01C53c1CDFa169c99822d203573eDBb7",
+            "Version": "0.0.1"
+         },
+         "WithdrawFacet": {
+            "Address": "0xb02467Cc764390Ac48a628979D35185d47F354Ae",
+            "Version": "0.0.1"
+         },
+         "LiquidationFacet": {
+            "Address": "0x296216d8c63769E3bC68a17F58C27eE1b8722Aea",
+            "Version": "0.0.1"
+         },
+         "OwnerFacet": {
+            "Address": "0x5Bf828D2F291b6f66A5c2D80b4d6695Ec1E65345",
+            "Version": "0.0.1"
+         },
+         "UIDataFacet": {
+            "Address": "0x30c2FC007867CcaAe7083a86f208Accc2DD3792d",
+            "Version": "0.0.1"
+         }
+      },
+      "InitialFund": {
+         "MToken": {
+            "SentAmount": "10000000000000000000000000",
+            "BalanceAfter": "10000000000000000000000000",
+            "Version": "0.0.1",
+            "TxHash": "0xae9979b1b238bab56cf476013e3d6e59f86cf70c50062df8399bc231707195f2"
+         }
+      }
+   }
+}

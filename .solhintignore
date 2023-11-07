@@ -1,0 +1,4 @@
+# Directories
+
+build/**/*
+node_modules/**/*

@@ -1,0 +1,197 @@
+{
+  "DiamondInit": {
+    "sepolia": {
+      "staging": {
+        "0.0.1": [
+          {
+            "ADDRESS": "0x7eA6Df6bc1ba3c0CeF7804a6a0a0C492B9AD1030",
+            "OPTIMIZER_RUNS": "600",
+            "TIMESTAMP": "2023-11-03 21:06:36",
+            "CONSTRUCTOR_ARGS": "0x",
+            "VERIFIED": "true"
+          }
+        ]
+      }
+    }
+  },
+  "DiamondCutFacet": {
+    "sepolia": {
+      "staging": {
+        "0.0.1": [
+          {
+            "ADDRESS": "0xFFEAB444c96EBf2f28CE1Fa04AAB0535042262b1",
+            "OPTIMIZER_RUNS": "600",
+            "TIMESTAMP": "2023-11-03 21:07:36",
+            "CONSTRUCTOR_ARGS": "0x",
+            "VERIFIED": "true"
+          }
+        ]
+      }
+    }
+  },
+  "DiamondLoupeFacet": {
+    "sepolia": {
+      "staging": {
+        "0.0.1": [
+          {
+            "ADDRESS": "0xc5FF7DF6Ab6621691D52829aD176BC18b0331Fd9",
+            "OPTIMIZER_RUNS": "600",
+            "TIMESTAMP": "2023-11-03 21:08:36",
+            "CONSTRUCTOR_ARGS": "0x",
+            "VERIFIED": "true"
+          }
+        ]
+      }
+    }
+  },
+  "DiamondOwnershipFacet": {
+    "sepolia": {
+      "staging": {
+        "0.0.1": [
+          {
+            "ADDRESS": "0xd8D8344fA59D1c1079395970385107C49B3AC8Eb",
+            "OPTIMIZER_RUNS": "600",
+            "TIMESTAMP": "2023-11-03 21:09:48",
+            "CONSTRUCTOR_ARGS": "0x",
+            "VERIFIED": "true"
+          }
+        ]
+      }
+    }
+  },
+  "MToken": {
+    "sepolia": {
+      "staging": {
+        "0.0.1": [
+          {
+            "ADDRESS": "0x62Ef433A9cF0c199f76e8f1434eB9F8E4ad71Eb3",
+            "OPTIMIZER_RUNS": "600",
+            "TIMESTAMP": "2023-11-03 21:10:48",
+            "CONSTRUCTOR_ARGS": "0x",
+            "VERIFIED": "true"
+          }
+        ]
+      }
+    }
+  },
+  "Diamond": {
+    "sepolia": {
+      "staging": {
+        "0.0.1": [
+          {
+            "ADDRESS": "0xB4CAc24d60b947313185A6346F7a8CA73424aF5C",
+            "OPTIMIZER_RUNS": "600",
+            "TIMESTAMP": "2023-11-03 21:11:48",
+            "CONSTRUCTOR_ARGS": "0x0000000000000000000000000000000000000000000000000000000000000040000000000000000000000000ffeab444c96ebf2f28ce1fa04aab0535042262b10000000000000000000000008dfd6ae6d263262da0e4a2634d899a0085923fbc0000000000000000000000007ea6df6bc1ba3c0cef7804a6a0a0c492b9ad103000000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000000000000000000000000000000000244d3d62b98000000000000000000000000000000000000000000000000000000000000002000000000000000000000000062ef433a9cf0c199f76e8f1434eb9f8e4ad71eb30000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000003e800000000000000000000000000000000000000000000000000000000000001f400000000000000000000000000000000000000000000000000000000000001f400000000000000000000000000000000000000000000000000000000000023280000000000000000000000000000000000000000000000000000000000000001000000000000000000000000ff34b3d4aee8ddcd6f9afffb6fe49bd371b8a3570000000000000000000000000d79df66be487753b02d015fb622ded7f0e9798d00000000000000000000000000000000000000000000000000000000000005dc00000000000000000000000000000000000000000000000000000000000003e800000000000000000000000000000000000000000000000000000000000005dc0000000000000000000000000000000000000000000000000000000000001f400000000000000000000000000000000000000000000000000000000000000001000000000000000000000000f8fb3713d459d7c1018bd0a49d19b4c44290ebe500000000000000000000000048731cf7e84dc94c5f84577882c14be11a5b745600000000000000000000000000000000000000000000000000000000",
+            "VERIFIED": "true"
+          }
+        ]
+      }
+    }
+  },
+  "DepositFacet": {
+    "sepolia": {
+      "staging": {
+        "0.0.1": [
+          {
+            "ADDRESS": "0xe538AB745ce87c2ef4dbf7C4Cff28C1011a12687",
+            "OPTIMIZER_RUNS": "600",
+            "TIMESTAMP": "2023-11-03 21:13:12",
+            "CONSTRUCTOR_ARGS": "0x",
+            "VERIFIED": "true"
+          }
+        ]
+      }
+    }
+  },
+  "BorrowFacet": {
+    "sepolia": {
+      "staging": {
+        "0.0.1": [
+          {
+            "ADDRESS": "0x2B2e7cA1318a9d8E587A2C24BD68de0EB628cB79",
+            "OPTIMIZER_RUNS": "600",
+            "TIMESTAMP": "2023-11-03 21:14:12",
+            "CONSTRUCTOR_ARGS": "0x",
+            "VERIFIED": "true"
+          }
+        ]
+      }
+    }
+  },
+  "RepayFacet": {
+    "sepolia": {
+      "staging": {
+        "0.0.1": [
+          {
+            "ADDRESS": "0x7d8d52DB01C53c1CDFa169c99822d203573eDBb7",
+            "OPTIMIZER_RUNS": "600",
+            "TIMESTAMP": "2023-11-03 21:15:00",
+            "CONSTRUCTOR_ARGS": "0x",
+            "VERIFIED": "true"
+          }
+        ]
+      }
+    }
+  },
+  "WithdrawFacet": {
+    "sepolia": {
+      "staging": {
+        "0.0.1": [
+          {
+            "ADDRESS": "0xb02467Cc764390Ac48a628979D35185d47F354Ae",
+            "OPTIMIZER_RUNS": "600",
+            "TIMESTAMP": "2023-11-03 21:16:00",
+            "CONSTRUCTOR_ARGS": "0x",
+            "VERIFIED": "true"
+          }
+        ]
+      }
+    }
+  },
+  "LiquidationFacet": {
+    "sepolia": {
+      "staging": {
+        "0.0.1": [
+          {
+            "ADDRESS": "0x296216d8c63769E3bC68a17F58C27eE1b8722Aea",
+            "OPTIMIZER_RUNS": "600",
+            "TIMESTAMP": "2023-11-03 21:17:12",
+            "CONSTRUCTOR_ARGS": "0x",
+            "VERIFIED": "true"
+          }
+        ]
+      }
+    }
+  },
+  "OwnerFacet": {
+    "sepolia": {
+      "staging": {
+        "0.0.1": [
+          {
+            "ADDRESS": "0x5Bf828D2F291b6f66A5c2D80b4d6695Ec1E65345",
+            "OPTIMIZER_RUNS": "600",
+            "TIMESTAMP": "2023-11-03 21:18:12",
+            "CONSTRUCTOR_ARGS": "0x",
+            "VERIFIED": "true"
+          }
+        ]
+      }
+    }
+  },
+  "UIDataFacet": {
+    "sepolia": {
+      "staging": {
+        "0.0.1": [
+          {
+            "ADDRESS": "0x30c2FC007867CcaAe7083a86f208Accc2DD3792d",
+            "OPTIMIZER_RUNS": "600",
+            "TIMESTAMP": "2023-11-03 21:19:24",
+            "CONSTRUCTOR_ARGS": "0x",
+            "VERIFIED": "true"
+          }
+        ]
+      }
+    }
+  }
+}

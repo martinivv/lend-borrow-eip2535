@@ -1,0 +1,12 @@
+# Directories
+build/
+deployments/
+node_modules/
+types/
+coverage/
+
+# Files
+*.env
+coverage.json
+package.json
+yarn.lock

@@ -1,0 +1,14 @@
+# Directories
+build/
+deployments/localhost
+node_modules/
+types/typechain
+coverage/
+
+# Secrets
+*.env
+*.secrets
+
+# Files
+coverage.json
+gas_reporter.txt
