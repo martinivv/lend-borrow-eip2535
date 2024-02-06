@@ -7,7 +7,7 @@ import { accounts } from "../hardhat-config/helpers"
 import type { TokenAddressMap } from "./global"
 import { Martin } from "./typechain"
 
-/* ========================= Augmentations ============================================================================ */
+/* ===================================================== AUGMENTATIONS ===================================================== */
 
 declare module "hardhat/types/runtime" {
     export type HardhatUsers<T> = {

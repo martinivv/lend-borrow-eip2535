@@ -1,6 +1,7 @@
+/* solhint-disable avoid-low-level-calls */
+
 // SPDX-License-Identifier: MIT
 // OpenZeppelin Contracts (last updated v5.0.0) (token/ERC20/utils/SafeERC20.sol)
-/* solhint-disable avoid-low-level-calls */
 pragma solidity ^0.8.20;
 
 import {IERC20} from "../interfaces/IERC20.sol";

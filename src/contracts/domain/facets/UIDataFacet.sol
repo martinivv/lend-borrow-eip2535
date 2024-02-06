@@ -8,7 +8,7 @@ import {LibUI} from "../libraries/logic/LibUI.sol";
 /// @dev Make changes depending on the front-end model. This implementation is conceptual
 /// @custom:version 0.0.1
 contract UIDataFacet {
-    /* =================================== Global ============================================================================================ */
+    /* =============================================================== GLOBAL =============================================================== */
 
     /// @notice Gets global-related data of the protocol
     /// @notice Aggregated view of the allowed tokens in @return allowedTokensBatch; in @return mTokenAddress — the address of the
@@ -22,7 +22,7 @@ contract UIDataFacet {
         mTokenAddress = LibUI.mTokenAddress();
     }
 
-    /* =================================== User's ============================================================================================ */
+    /* =============================================================== USER'S =============================================================== */
 
     /// @notice Returns the maximum amount in USD that can be borrowed based on @param _collateralAddress
     /// and @param _collateralAmount values
@@ -48,7 +48,7 @@ contract UIDataFacet {
         borrowedTokensBatch = LibUI.batchBorrowedTokens(_account);
     }
 
-    /* =================================== Keeper's ============================================================================================ */
+    /* =============================================================== KEEPER'S =============================================================== */
 
     /// @notice Returns all borrowers in the protocol as @return allBorrowers
     function getAllBorrowers() external view returns (address[] memory allBorrowers) {

@@ -4,13 +4,12 @@ A simplified, highly scalable conceptual solution for a DeFi Lending and Borrowi
 
 ## Quick Start
 
-1. **`yarn`** (*postinstall* will be activated, compiling the project)
+1. **`yarn`** (_postinstall_ will be activated, compiling the project)
 2. **`yarn test`**
 3. **`yarn deploy`**
 
 ## Check
 
 1. **tests** folder
-2. **SECURITY** file for some additional thoughts regarding the security of the protocol
-3. **docs** folder
-4. **deployments/_deployment_logs** files for deployment logs
+2. **docs** folder
+3. **deployments/\_deployment_logs** files for deployment logs

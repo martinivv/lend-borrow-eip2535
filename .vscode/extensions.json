@@ -1,4 +1,4 @@
 {
     // List of extensions which should be recommended for users of this workspace
-    "recommendations": ["NomicFoundation.hardhat-solidity", "esbenp.prettier-vscode"]
+    "recommendations": ["nomicfoundation.hardhat-solidity", "esbenp.prettier-vscode", "stackbreak.comment-divider"]
 }

@@ -16,7 +16,7 @@ contract RepayFacet is AssetsModifiers, ProtocolModifiers {
     /// @param _collateralAddress The address of the used collateral token
     /// @param tokenAddress The borrowed token address
     /// @param _tokenAmount The borrowed amount
-    /// @dev In the front-end — ensure correct allowance handling
+    /// @dev Ensure correct allowance handling
     /// @custom:exec Checks -> calculation library call -> transfer -> internal state changes
     function repay(
         address _collateralAddress,
@@ -27,8 +27,8 @@ contract RepayFacet is AssetsModifiers, ProtocolModifiers {
         (uint256 verifiedAmount, uint256 totalToRepay) = a().calculateAmountToRepay(tokenAddress, _tokenAmount);
         // Before any state changes as an additional re-entrancy metric
         IERC20(tokenAddress).safeTransferFrom(msg.sender, address(this), totalToRepay);
-
         emit DomainEvents.Repay(tokenAddress, totalToRepay, msg.sender);
+
         a().recordRepay(_collateralAddress, tokenAddress, verifiedAmount);
     }
 }

@@ -18,7 +18,7 @@ contract DepositFacet is AssetsModifiers, ProtocolModifiers {
     /// @notice Deposits tokens
     /// @param tokenAddress The address of token you want to stake
     /// @param tokenAmount The amount of the token
-    /// @dev In the front-end — ensure correct allowance handling
+    /// @dev Ensure correct allowance handling
     /// @custom:security Transfers tokens before any state changes as an additional re-entrancy safeguard
     /// @custom:security For the simplicity of this version, `tokenAmount` will represent a whole number (ofc)
     /// of tokens without decimal places

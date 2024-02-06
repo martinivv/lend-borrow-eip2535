@@ -30,7 +30,6 @@ contract LiquidationFacet is AssetsModifiers, ProtocolModifiers {
 
         IERC20 collateral = IERC20(collateralAddress);
         if (collateral.balanceOf(address(this)) < rewardInTokens) revert DomainErrors.InsufficientProtocolFunds();
-
         emit DomainEvents.Liquidation(_borrower, borrowedToken, rewardInTokens, msg.sender);
         collateral.safeTransfer(msg.sender, rewardInTokens);
     }

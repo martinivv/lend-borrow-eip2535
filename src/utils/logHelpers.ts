@@ -6,7 +6,7 @@ import { ContractAddressMap, IDiamondFile, ILogFile } from "../../types/global"
 
 const { network, ethers, artifacts } = hre
 
-/* ======================== Properties ================================================================ */
+/* ========================================================= PROPERTIES ========================================================= */
 
 const isProduction = process.env.PRODUCTION?.toLowerCase() === "true"
 
@@ -18,7 +18,7 @@ export const diamondFile = isProduction
     ? `deployments/_deployment_logs/${network.name}_diamond.json`
     : `deployments/_deployment_logs/${network.name}_staging_diamond.json`
 
-/* =================================== Methods =================================================================================== */
+/* ========================================================= METHODS ========================================================= */
 
 export const updateDeploymentLogs = async function (name: string, deployResult: DeployResult, isVerified?: boolean) {
     const path = (await artifacts.readArtifact(name)).sourceName
@@ -43,6 +43,7 @@ export const updateDeploymentLogs = async function (name: string, deployResult: 
 export const updateLog = (name: string, version: string, info: any) => {
     let data: ILogFile = {}
     try {
+        // The files won't be large, so the `sync` option is just fine
         data = JSON.parse(fs.readFileSync("deployments/_deployment_logs/deployment_details.json", "utf8")) as ILogFile
     } catch {}
 

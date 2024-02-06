@@ -7,7 +7,7 @@ import {DiamondErrors} from "../../../helpers/Errors.sol";
 /// @title LibDiamondOwnership
 /// @notice Library collection of diamond ownership functions
 library LibDiamondOwnership {
-    /// @notice Emitted when diamond owner is updated
+    /// @notice Emitted when the diamond owner is updated
     event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);
 
     /// @notice Updates the diamond owner to @param _newOwner's address
@@ -23,7 +23,7 @@ library LibDiamondOwnership {
         contractOwner_ = self.contractOwner;
     }
 
-    /// @notice Checks if `msg.sender` is the diamond owner
+    /// @notice Checks if the `msg.sender` is the diamond owner
     function enforceIsContractOwner(DiamondState storage self) internal view {
         if (msg.sender != self.contractOwner) revert DiamondErrors.MustBeDiamondOwner(msg.sender);
     }

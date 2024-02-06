@@ -1,26 +1,26 @@
 import type { HardhatUserConfig } from "hardhat/config"
 
-// ================= PLUGINS ===========================================================
+/* ======================================== PLUGINS ======================================== */
 // 👇 plugin should be placed before TypeChain
 import "hardhat-diamond-abi"
 import "@nomicfoundation/hardhat-toolbox"
 import "@nomiclabs/hardhat-ethers"
 import "hardhat-deploy"
 
-// ================= DOTENV ===========================================================
+/* ======================================== DOTENV ======================================== */
 import { config as dotenvConfig } from "dotenv"
 dotenvConfig({ path: __dirname + "/.env" })
 
 // const PRIVATE_KEY = process.env.PRIVATE_KEY
 // if (!PRIVATE_KEY) throw new Error("The private key isn't set.")
 
-// ================= EXTENSIONS ===========================================================
+/* ======================================== EXTENSIONS ======================================== */
 import "./hardhat-config/extensions"
 
-// ================= HELPERS ===========================================================
+/* ======================================== HELPERS ======================================== */
 import { compilers, networks, users } from "./hardhat-config/helpers"
 
-// ================= CONFIGURATION ===========================================================
+/* ======================================== CONFIGURATION ======================================== */
 const outDir = "types/typechain"
 
 const config: HardhatUserConfig = {

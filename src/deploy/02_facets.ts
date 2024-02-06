@@ -6,7 +6,7 @@ import { updateDeploymentLogs, updateDiamond, verify } from "../utils/logHelpers
 
 const exec: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
     hre.log("#2.")
-    /* =============================== Deployment ================================================================= */
+    /* ============================================== DEPLOYMENT ============================================== */
 
     const contracts = []
     for (const facetName of facets) {
@@ -17,7 +17,7 @@ const exec: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
         await updateDeploymentLogs(facetName, facet, isVerified)
     }
 
-    /* =============================== Cut ================================================================= */
+    /* ================================================== CUT ================================================= */
 
     await addOrReplaceFacets(contracts, hre.Diamond.target)
 

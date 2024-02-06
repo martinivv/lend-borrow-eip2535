@@ -8,7 +8,7 @@ using LibDiamondCut for DiamondState global;
 using LibDiamondOwnership for DiamondState global;
 
 /// @notice Struct defining the current diamond state
-/// @custom:advice Consider creating a library with "generic" functions related to `DiamondState`
+/// @custom:advice Always you can create a library with "generic" functions related to `DiamondState`
 struct DiamondState {
     /// @notice Function selector -> address facet and selector positions
     mapping(bytes4 => bytes32) facets;
@@ -30,7 +30,6 @@ bytes32 constant DIAMOND_STORAGE_POSITION = keccak256("martinivv.diamond.storage
 /// @return ds Storage pointer to `DiamondState` struct
 function d() pure returns (DiamondState storage ds) {
     bytes32 position = DIAMOND_STORAGE_POSITION;
-
     assembly {
         ds.slot := position
     }

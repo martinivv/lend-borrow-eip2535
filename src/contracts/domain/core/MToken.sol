@@ -1,5 +1,6 @@
-// SPDX-License-Identifier: MIT
 /* solhint-disable state-visibility */
+
+// SPDX-License-Identifier: MIT
 pragma solidity =0.8.20;
 
 import {ERC20} from "../vendor/ERC20.sol";
@@ -7,7 +8,7 @@ import {IMToken} from "../interfaces/IMToken.sol";
 
 /// @title MToken
 /// @notice The interest-bearing token associated with the protocol
-/// @custom:advice Consider implementing a more robust access control mechanism, like OZ's
+/// @custom:advice Consider implementing a more robust access control mechanism; like OZ's
 /// @custom:version 0.0.1
 contract MToken is ERC20, IMToken {
     /// @notice The address of the owner
@@ -43,14 +44,12 @@ contract MToken is ERC20, IMToken {
     constructor() ERC20("MToken", "MMM") {
         owner = msg.sender;
         emit OwnerChanged(address(0), owner);
-
         _mint(msg.sender, SUPPLY);
     }
 
     /// @notice Mints token @param _amount to @param _to address
     function mint(address _to, uint256 _amount) external onlyOwner {
         uint256 scaledAmount = _amount * 1e18;
-
         _mint(_to, scaledAmount);
     }
 

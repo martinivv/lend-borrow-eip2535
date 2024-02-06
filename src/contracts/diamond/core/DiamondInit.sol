@@ -13,7 +13,6 @@ import {LibOwner} from "../../domain/libraries/logic/LibOwner.sol";
 /// @title DiamondInit
 /// @notice Contract for setting state variables in the diamond during deployment or an upgrade
 /// @custom:security It is only called once in the diamond constructor and is not saved as a facet within the diamond
-/// @custom:advice See the suggestions made in `Diamond.sol`, keep them in mind throughout the Diamond contracts
 /// @custom:version 0.0.1
 contract DiamondInit is ProtocolModifiers {
     struct DiamondInitArgs {
@@ -24,7 +23,7 @@ contract DiamondInit is ProtocolModifiers {
     /// @notice Sets state variables
     /// @param _args Initial arguments
     function init(DiamondInitArgs calldata _args) external {
-        // ============= Diamond Initialization ==================================
+        /* ======================= DIAMOND INITIALIZATION ======================= */
         DiamondState storage ds = d();
 
         ds.supportedInterfaces[type(IERC165).interfaceId] = true;
@@ -32,7 +31,7 @@ contract DiamondInit is ProtocolModifiers {
         ds.supportedInterfaces[type(IDiamondLoupeFacet).interfaceId] = true;
         ds.supportedInterfaces[type(IERC173).interfaceId] = true;
 
-        // ============= Protocol&Assets Initialization ==================================
+        /* ======================= PROTOCOL&ASSETS INITIALIZATION ======================= */
         ProtocolState storage ps = p();
 
         _initReentrancyGuard();

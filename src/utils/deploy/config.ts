@@ -58,7 +58,7 @@ export const getAllowedTokensHre = async function () {
     return tokens
 }
 
-/* ========================= Builders ============================================================================== */
+/* ======================================================= BUILDERS ======================================================= */
 
 export const createConfig = (
     stakeStableRate: BigNumberish,

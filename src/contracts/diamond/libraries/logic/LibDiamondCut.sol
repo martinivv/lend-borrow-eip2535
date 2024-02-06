@@ -1,19 +1,17 @@
-// SPDX-License-Identifier: MIT
 // solhint-disable avoid-low-level-calls
 // solhint-disable code-complexity
 // solhint-disable custom-errors
 
+// SPDX-License-Identifier: MIT
 pragma solidity =0.8.20;
 
 import {IDiamondCutFacet} from "../../interfaces/IDiamondCutFacet.sol";
 import {DiamondState, d} from "../DiamondState.sol";
-// Consider adding remappings
 import {DiamondEvents} from "../../../helpers/Events.sol";
 import {DiamondErrors} from "../../../helpers/Errors.sol";
 import {DiamondConstants} from "../../../helpers/Constants.sol";
 
 /// @notice See {diamondCut}'s @notice
-/// @custom:security Will behave like an internal function of the calling contract
 function initializeDiamondCut(address _init, bytes memory _calldata) {
     if (_init == address(0)) return;
 
@@ -41,7 +39,7 @@ function initializeDiamondCut(address _init, bytes memory _calldata) {
 /// copying calldata to memory which causes an error for a two dimensional array
 library LibDiamondCut {
     /// @notice Adds/replaces/removes any number of functions and optionally executes
-    /// a function with delegatecall
+    /// a function with `delegatecall`
     /// @param _diamondCut Contains the facet addresses and function selectors
     /// @param _init The address of the contract or facet to execute `_calldata`
     /// @param _calldata A function call, including function selector and arguments

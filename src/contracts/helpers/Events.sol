@@ -1,6 +1,6 @@
-// SPDX-License-Identifier: MIT
 // solhint-disable one-contract-per-file
 
+// SPDX-License-Identifier: MIT
 pragma solidity =0.8.20;
 
 import {IDiamondCutFacet} from "../diamond/interfaces/IDiamondCutFacet.sol";

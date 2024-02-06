@@ -3,7 +3,7 @@ pragma solidity =0.8.20;
 
 /// @title IDiamondLoupeFacet
 interface IDiamondLoupeFacet {
-    /// @notice Used with {facets} to return all facet addresses and their four byte function selectors
+    /// @notice Used with {facets} to return all facet addresses and their 4 byte function selectors
     struct Facet {
         address facetAddress;
         bytes4[] functionSelectors;
@@ -22,6 +22,5 @@ interface IDiamondLoupeFacet {
     function facetAddresses() external view returns (address[] memory facetAddresses_);
 
     /// @notice Gets the @return facetAddress_ that supports given @param _functionSelector
-    /// @custom:advice Consider implementing better error handling if the facet is not found
     function facetAddress(bytes4 _functionSelector) external view returns (address facetAddress_);
 }

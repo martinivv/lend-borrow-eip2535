@@ -90,7 +90,7 @@ struct AssetsState {
     address[] borrowers;
 }
 
-/* ============================= Pointer =============================================================================== */
+/* ======================================================= POINTER ======================================================= */
 
 bytes32 constant ASSETS_STORAGE_POSITION = keccak256("martinivv.assets.storage");
 
@@ -105,11 +105,11 @@ function a() pure returns (AssetsState storage ast) {
     }
 }
 
-/* ============================= Modifiers =============================================================================== */
+/* ======================================================= MODIFIERS ======================================================= */
 
 /// @notice Includes modifiers shared across protocol's contracts
 abstract contract AssetsModifiers {
-    /* ============================= Deposit & Borrow =========================================================== */
+    /* =========================================== DEPOSIT & BORROW =========================================== */
 
     /// @notice Checks if @param _tokenAddress is allowed and @param _tokenAmount is greater than 0
     /// @custom:security Zero value ERC20 transfers are terminated in the protocol
@@ -143,7 +143,7 @@ abstract contract AssetsModifiers {
         _;
     }
 
-    /* ============================= Repay =========================================================== */
+    /* ================================================= REPAY ================================================ */
 
     /// @notice Looks @param _collateralAddress and @param _borrowedToken to be repayable
     /// @custom:security Checking the validity of the `_collateralAddress` is crucial for the
@@ -158,7 +158,7 @@ abstract contract AssetsModifiers {
         _;
     }
 
-    /* ============================= Liquidation =========================================================== */
+    /* ============================================== LIQUIDATION ============================================= */
 
     /// @notice Looks @param _borrower and @param _borrowedToken to be liquidatable
     modifier liquidatable(address _borrower, address _borrowedToken) {
@@ -169,7 +169,7 @@ abstract contract AssetsModifiers {
         _;
     }
 
-    /* ============================= Global =========================================================== */
+    /* ================================================ GLOBAL ================================================ */
 
     /// @notice Looks @param _tokenAmount to be positive
     modifier positiveAmount(uint256 _tokenAmount) {

@@ -11,7 +11,6 @@ contract TokenA is ERC20 {
     /// @notice Initial supply amount
     uint256 constant SUPPLY = 100_000_000 * 1e18;
 
-    /// @notice Contract constructor
     constructor() ERC20("TokenA", "AAA") {
         _mint(msg.sender, SUPPLY);
     }

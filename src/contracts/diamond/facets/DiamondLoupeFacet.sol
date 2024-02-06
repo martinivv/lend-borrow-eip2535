@@ -1,6 +1,6 @@
-// SPDX-License-Identifier: MIT
 // solhint-disable code-complexity
 
+// SPDX-License-Identifier: MIT
 pragma solidity =0.8.20;
 
 import {IDiamondLoupeFacet} from "../interfaces/IDiamondLoupeFacet.sol";
@@ -137,6 +137,7 @@ contract DiamondLoupeFacet is IDiamondLoupeFacet, IERC165 {
     }
 
     /// @inheritdoc IDiamondLoupeFacet
+    /// @custom:advice Consider implementing better error handling if the facet is not found
     function facetAddress(bytes4 _functionSelector) external view override returns (address facetAddress_) {
         facetAddress_ = address(bytes20(d().facets[_functionSelector]));
     }

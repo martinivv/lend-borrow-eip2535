@@ -16,7 +16,7 @@ struct ProtocolState {
     uint32 answerStalenessThreshold;
 }
 
-/* ============================= Pointer ============================================================================= */
+/* ====================================================== POINTER ====================================================== */
 
 bytes32 constant PROTOCOL_STORAGE_POSITION = keccak256("martinivv.protocol.storage");
 
@@ -31,7 +31,7 @@ function p() pure returns (ProtocolState storage ps) {
     }
 }
 
-/* ============================= Modifiers ============================================================================= */
+/* ====================================================== MODIFIERS ====================================================== */
 
 /// @notice Includes modifiers shared across protocol's contracts
 /// @custom:advice Consider adding more robust access control management

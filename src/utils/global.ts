@@ -2,7 +2,7 @@ import { SignerWithAddress } from "@nomicfoundation/hardhat-ethers/signers"
 import type { HardhatRuntimeEnvironment } from "hardhat/types/runtime"
 import type { NetworkInfoMap } from "../../types/global"
 
-/* ========================= Users ============================================================================== */
+/* ==================================================== USERS ==================================================== */
 
 export const getUsers = async function (hre?: HardhatRuntimeEnvironment): Promise<Record<string, SignerWithAddress>> {
     if (!hre) hre = require("hardhat")
@@ -10,7 +10,7 @@ export const getUsers = async function (hre?: HardhatRuntimeEnvironment): Promis
     return hre!.ethers.getNamedSigners()
 }
 
-/* ========================= Networks ============================================================================== */
+/* ==================================================== NETWORKS ==================================================== */
 
 // Be cautious when using it on a network with a lot of block reorgs, as lower value can produce inaccuracies
 export const BLOCK_CONFIRMATIONS = 4

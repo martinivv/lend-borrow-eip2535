@@ -12,7 +12,7 @@ const fundMToken = async function () {
 
     console.log("Transfering MTokens to the protocol...")
 
-    await mToken.transfer(diamondDeployment.address, sentAmount).then(async function (result) {
+    mToken.transfer(diamondDeployment.address, sentAmount).then(async function (result) {
         const receipt = await result.wait()
 
         if (!receipt?.status) throw new Error(`Transfer failed: ${result.hash}`)

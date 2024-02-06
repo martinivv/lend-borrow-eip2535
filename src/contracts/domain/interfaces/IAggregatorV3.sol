@@ -2,7 +2,7 @@
 pragma solidity =0.8.20;
 
 /// @title IAggregatorV3
-/// @notice This interface enables utilization of Chainlink data feeds
+/// @notice This interface enables utilization of the Chainlink's data feeds
 interface IAggregatorV3 {
     /// @notice Returns the number of decimals in the response
     /// @return {uint8}
@@ -13,7 +13,7 @@ interface IAggregatorV3 {
     /// @return answer The data that this specific feed provides
     /// @return startedAt Timestamp of when the round started
     /// @return updatedAt Timestamp of when the round was updated
-    /// @return answeredInRound Deprecated. Previously used when answers could take multiple rounds to be computed
+    /// @return answeredInRound **Deprecated**. Previously used when answers could take multiple rounds to be computed
     function latestRoundData()
         external
         view

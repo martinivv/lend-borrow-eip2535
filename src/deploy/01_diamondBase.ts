@@ -1,18 +1,17 @@
+//Intentionally, remappings aren't added to prevent a potential error during compilation
 import { DeployFunction } from "hardhat-deploy/types"
 import { HardhatRuntimeEnvironment } from "hardhat/types"
-// Many conflicts occurred when a relative path was used. Intentionally are not
-// added to prevent a potential error during compilation
 import { Martin } from "../../types/typechain"
 import { runDiamondCutting, runDiamondSetup } from "../utils/deploy/run"
 import { updateDeploymentLogs, updateDiamond, verify } from "../utils/logHelpers"
 
 const exec: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
     hre.log("\n#1.")
-    /* ============================ SETUP =================================================================================== */
+    /* ====================================================== SETUP ====================================================== */
 
     const { mTokenAddress, allowedTokens } = await runDiamondSetup(hre)
 
-    /* ============================ DEPLOYMENT =================================================================================== */
+    /* ====================================================== DEPLOYMENT ====================================================== */
 
     const diamondInit = await hre.get("DiamondInit")
     const calldata = diamondInit.interface.encodeFunctionData("init", [
@@ -41,14 +40,14 @@ const exec: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
     await updateDiamond(["DiamondCutFacet"])
 
     // Setting the operator
-    await hre.getAt("MToken", mTokenAddress).then(async result => await result.setOperator(deployment.address))
+    hre.getAt("MToken", mTokenAddress).then(async result => await result.setOperator(deployment.address))
 
     // Saving for later use
     hre.DiamondDeployment = deployment
     // 👇 is for getting data on-chain
     hre.Diamond = (await hre.getAt("Martin", deployment.address)) as unknown as Martin
 
-    /* ============================ CUT =================================================================================== */
+    /* ====================================================== CUT ====================================================== */
 
     await runDiamondCutting(hre)
 

@@ -1,6 +1,6 @@
 import { HardhatUserConfig, NetworksUserConfig, SolidityUserConfig } from "hardhat/types"
 
-/* ==================== Users ============================================================== */
+/* ================================================= USERS ================================================ */
 
 export const accounts = {
     deployer: {
@@ -16,7 +16,7 @@ export const accounts = {
 
 export const users: HardhatUserConfig["namedAccounts"] = accounts
 
-/* ==================== Compilers ============================================================== */
+/* =============================================== COMPILERS ============================================== */
 
 export const compilers: SolidityUserConfig = {
     version: "0.8.20",
@@ -31,7 +31,7 @@ export const compilers: SolidityUserConfig = {
     },
 }
 
-/* ==================== Networks ============================================================== */
+/* =============================================== NETWORKS =============================================== */
 
 export const networks = (/* PRIVATE_KEY: string */): NetworksUserConfig => ({
     sepolia: {

@@ -1,6 +1,4 @@
 import { Addressable, BaseContract, Contract, FunctionFragment, Interface, ZeroAddress } from "ethers"
-// Many conflicts occurred when a relative path was used. Intentionally are not
-// added to prevent a potential error during compilation
 import { FacetCutAction, IFacetCut } from "../../types/global"
 import hre from "hardhat"
 import { IDiamondCutFacet } from "../../types/typechain"
